@@ -8,7 +8,7 @@
 
 ## 一、 读写分离
 
-```aidl
+```
 2022-02-08 14:59:23.127  INFO 1664 --- [           main] ShardingSphere-SQL                       : SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
 2022-02-08 14:59:23.127  INFO 1664 --- [           main] ShardingSphere-SQL                       : Actual SQL: write-shardingmaster ::: INSERT INTO t_order1  ( order_id,
 order_name,
