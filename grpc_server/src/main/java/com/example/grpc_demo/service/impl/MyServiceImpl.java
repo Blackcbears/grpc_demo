@@ -4,7 +4,11 @@ import com.example.grpc_lib.HelloReply;
 import com.example.grpc_lib.HelloRequest;
 import com.example.grpc_lib.SimpleGrpc;
 import io.grpc.stub.StreamObserver;
+import net.devh.boot.grpc.server.security.check.GrpcSecurityMetadataSource;
 import net.devh.boot.grpc.server.service.GrpcService;
+import org.springframework.security.access.annotation.Secured;
+
+import javax.annotation.Resource;
 
 /**
  * <br>
