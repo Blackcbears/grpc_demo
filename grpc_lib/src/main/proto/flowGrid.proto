@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc_lib";
+option java_outer_classname = "flowGridService";
+
+// The greeting service definition.
+service flowGridService {
+  // Sends a greeting
+  rpc sendFlowGrid (stream flowGridRequest) returns (flowGridReply) {
+  }
+}
+
+// The request message containing the user's name.
+message flowGridRequest {
+  // 机构名称
+  string hospitalName = 1;
+  // 物料名称
+  string mtrName = 2;
+  //产地
+  string mtrFrom = 3;
+  // 数量
+  int64 qty = 4;
+  // 批号
+  string batchNo = 5;
+  // 出库日期
+  string date = 6;
+  // 出库方式
+  string tranType = 7;
+  // 规格
+  string model = 8;
+}
+
+// The response message containing the greetings
+message flowGridReply {
+  string message = 1;
+}

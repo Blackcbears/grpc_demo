@@ -5,18 +5,19 @@ option java_package = "com.example.grpc_lib";
 option java_outer_classname = "HelloWorldProto";
 
 // The greeting service definition.
-service Simple {
+service SimpleFile {
   // Sends a greeting
-  rpc SayHello (stream HelloRequest) returns (HelloReply) {
+  rpc sendFile (stream FileRequest) returns (FileReply) {
   }
 }
 
 // The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
+message FileRequest {
+  bytes fileStream = 1;
+  string fileName = 2;
 }
 
 // The response message containing the greetings
-message HelloReply {
+message FileReply {
   string message = 1;
 }
